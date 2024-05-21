@@ -249,10 +249,10 @@ test_dataloader = DataLoader(test_dataset,
                                  batch_size=64)
 
 
-# Inspect one element from the train data loader
-train_batch = next(iter(train_dataloader))
-print("Train batch:")
-print("Input IDs shape:", train_batch[0].shape)
-print("Output DX labels shape:", train_batch[1].shape)
-print("Output PROC labels shape:", train_batch[2].shape)
-print()
+# # Inspect one element from the train data loader
+# train_batch = next(iter(train_dataloader))
+# print("Train batch:")
+# print("Input IDs shape:", train_batch[0].shape)
+# print("Output DX labels shape:", train_batch[1].shape)
+# print("Output PROC labels shape:", train_batch[2].shape)
+# print()

@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 from src.EHRBert.bert_pretrain import BERT_Pretrain
 from src.EHRBert.bert_config import BertConfig
-from ehr_dataset import train_dataloader, eval_dataloader, train_dataset, tokenizer
+from src.ehr_dataset import train_dataloader, eval_dataloader, train_dataset, tokenizer
 from src.utils import metric_report, get_n_params
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',

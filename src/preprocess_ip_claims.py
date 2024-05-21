@@ -228,6 +228,7 @@ if __name__ == "__main__":
     print('-'*50)
     print('Processing the combined IP claims...')
     print('-'*50)
+    
     # Process the combined IP claims
     processor = ClaimsProcessor('./data/combined_ip_claims.pkl')
     processor.preprocess()
