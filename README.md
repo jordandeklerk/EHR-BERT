@@ -2,7 +2,11 @@
 
 ## Highlights
 
-EHR-BERT is a project aimed at leveraging BERT (Bidirectional Encoder Representations from Transformers) for Electronic Health Records (EHR) data. This project includes scripts and tools to preprocess data, train the BERT model, and evaluate its performance on healthcare-related tasks like diagnosis and procedure code prediction. The following sections provide detailed instructions on setting up the environment, downloading necessary data, preprocessing the data, and running the main training and evaluation scripts.
+![BEHRT Architecture](./images/bert.png)
+
+EHR-BERT is a project aimed at leveraging BERT (Bidirectional Encoder Representations from Transformers) for Electronic Health Records (EHR) data. BERT is an encoder-only transformer model that processes sequences of data by capturing context from both directions (left-to-right and right-to-left) simultaneously. This bidirectional capability allows it to understand the nuanced relationships within the data. In the context of EHR data, BERT is adapted to handle the unique structure of medical records, which include sequential visits, diagnoses, procedures, and patient information such as age and event positions.
+
+EHR-BERT takes into account diagnoses, age, positional encodings for events, and segment encodings that differentiate between visits. These elements are combined to form a final embedding that represents the latent contextual information of a patient's EHR at any given visit.
 
 ## Contents
 
@@ -31,15 +35,15 @@ EHR-BERT is a project aimed at leveraging BERT (Bidirectional Encoder Representa
 │   ├── test-id.txt
 │   └── train-id.txt
 ├── download_data.sh
-├── ehr_dataset.py
 ├── main.py
-├── preprocess_ip_claims.py
 ├── requirements.txt
 ├── src
 │   ├── EHRBert
 │   │   ├── bert.py
 │   │   ├── bert_config.py
 │   │   └── bert_pretrain.py
+│   ├── ehr_dataset.py
+│   ├── preprocess_ip_claims.py
 │   └── utils.py
 └── vocab
     ├── dx-vocab.txt
