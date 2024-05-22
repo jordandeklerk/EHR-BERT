@@ -59,8 +59,21 @@ Though limited in inferential research value, SynPUFs offer a timely and cost-ef
 ## Usage
 
 ### Install Dependencies
-To install the required Python packages, run the following script:
+
+Create a virtual environment and clone this repository:
+
 ```bash
+# Clone the repository
+git clone git@github.com:jordandeklerk/EHR-BERT.git
+cd EHR-BERT
+
+# Create a virtual environment
+python3 -m venv myenv
+
+# Activate the virtual environment
+source myenv/bin/activate
+
+# Install the required Python packages
 pip install -r requirements.txt
 ```
 
