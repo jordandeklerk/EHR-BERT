@@ -65,7 +65,7 @@ pip install -r requirements.txt
 ```
 
 ### Download Data
-Execute the following `download_data.sh` script to download and unzip the CMS data files into the `cms_de10_data` folder. Edit the shell script if you don't want to utilize the full sample of CMS data:
+Execute the following `download_data.sh` script to download and unzip the CMS data files into the `cms_de10_data` folder (this will take a while for the full sample). Edit the shell script if you don't want to utilize the full sample of CMS data:
 ```bash
 bash download_data.sh
 ```
