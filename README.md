@@ -18,8 +18,6 @@ EHR-BERT takes into account diagnoses, age, positional encodings for events, and
   - [Preprocess Data](#preprocess-data)
   - [Run the Main Script](#run-the-main-script)
   - [Results](#results)
-  - [TODO](#todo)
-- [File Descriptions](#file-descriptions)
 
 ## Project Structure
 
