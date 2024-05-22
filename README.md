@@ -97,7 +97,7 @@ python main.py --model_name 'Bert-Pretraining' \
 | Diagnosis PR-AUC      | ~80%       | `num_train_epochs=15`, `learning_rate=5e-4` |
 | Procedure PR-AUC      | ~87%       | `num_train_epochs=15`, `learning_rate=5e-4` |
 
-## TODO
+## Todo
 
 - [ ] Use the pre-trained model for downstream re-admission prediction.
 
@@ -107,3 +107,14 @@ python main.py --model_name 'Bert-Pretraining' \
 - `preprocess_ip_claims.py`: Script to preprocess the raw claims data.
 - `ehr_dataset.py`: Contains functions for dataset loading and preprocessing.
 - `main.py`: Main script for training and evaluating the model.
+
+## Citations
+
+```bibtex
+@article{devlin2018bert,
+  title={BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv preprint arXiv:1810.04805},
+  year={2018}
+}
+```
