@@ -169,8 +169,8 @@ def main():
                     "proc2proc_acc": proc2proc_metrics['prauc'],
                 })
 
-                log_metrics(dx2dx_metrics, global_step, prefix='eval_dx2dx')
-                log_metrics(proc2proc_metrics, global_step, prefix='eval_proc2proc')
+                log_metrics(dx2dx_metrics, global_step, args, prefix='eval_dx2dx')
+                log_metrics(proc2proc_metrics, global_step, args, prefix='eval_proc2proc')
 
                 if args.use_wandb:
                     wandb.log({"eval/loss": avg_eval_loss, "epoch": epoch}, step=global_step)
