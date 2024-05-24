@@ -67,7 +67,6 @@ def main():
 
     # Other parameters
     parser.add_argument("--use_pretrain", default=False, action='store_true', help="Use pretraining model")
-    parser.add_argument("--graph", default=False, action='store_true', help="Use ontology embedding")
     parser.add_argument("--threshold", default=0.3, type=float, help="Threshold")
     parser.add_argument("--max_seq_length", default=55, type=int, help="Max sequence length after tokenization")
     parser.add_argument("--do_train", default=True, action='store_true', help="Whether to run training")
@@ -79,7 +78,6 @@ def main():
     parser.add_argument("--num_train_epochs", default=15, type=int, help="Total number of training epochs")
     parser.add_argument("--no_cuda", action='store_true', help="Whether not to use CUDA when available")
     parser.add_argument("--seed", type=int, default=1315, help="Random seed for initialization")
-    parser.add_argument("--warmup_proportion", default=0.1, type=float, help="Proportion of training to perform linear learning rate warmup")
     parser.add_argument("--use_wandb", action='store_true', help="Use wandb for logging")
     parser.add_argument("--wandb_api_key", type=str, help="Wandb API key")
 
