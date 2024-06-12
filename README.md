@@ -105,8 +105,8 @@ python main.py --model_name 'Bert-Pretraining' \
 
 | Metric                | Value      | Hyperparameters       |
 |-----------------------|------------|-----------------------|
-| Diagnosis PR-AUC      | ~80%       | `num_train_epochs=15`, `learning_rate=5e-4` |
-| Procedure PR-AUC      | ~87%       | `num_train_epochs=15`, `learning_rate=5e-4` |
+| Diagnosis PR-AUC      | ~83%       | `num_train_epochs=15`, `learning_rate=5e-4` |
+| Procedure PR-AUC      | ~84%       | `num_train_epochs=15`, `learning_rate=5e-4` |
 
 ## Todo
 
