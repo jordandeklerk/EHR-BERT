@@ -139,8 +139,8 @@ class EHRDataset(Dataset):
                 print(f"Warning: Token {item} not found in proc_voc.")
 
         # replace tokens with [MASK]
-        adm[0] = random_word(adm[0], self.tokenizer.proc_voc)
-        adm[1] = random_word(adm[1], self.tokenizer.dx_voc)
+        adm[0] = random_word(adm[0], self.tokenizer.dx_voc)
+        adm[1] = random_word(adm[1], self.tokenizer.proc_voc)
 
         # extract input and output tokens
         input_tokens = []  # (2*max_len)
