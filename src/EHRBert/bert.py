@@ -262,34 +262,3 @@ class BertPooler(nn.Module):
         """Forward pass for BERT pooler."""
         first_token_tensor = hidden_states[:, 0]
         return self.activation(self.dense(first_token_tensor))
-
-
-class BertPredictionHeadTransform(nn.Module):
-    def __init__(self, config: BertConfig):
-        """Initialize prediction head transform with dense and LayerNorm."""
-        super().__init__()
-        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
-        self.transform_act_fn = gelu
-        self.LayerNorm = LayerNorm(config.hidden_size, eps=1e-12)
-
-    def forward(self, hidden_states: torch.Tensor) -> torch.Tensor:
-        """Forward pass for prediction head transform."""
-        hidden_states = self.dense(hidden_states)
-        hidden_states = self.transform_act_fn(hidden_states)
-        return self.LayerNorm(hidden_states)
-
-
-class BertLMPredictionHead(nn.Module):
-    def __init__(self, config: BertConfig, voc_size: int = None):
-        """Initialize language model prediction head with transform and decoder."""
-        super().__init__()
-        self.transform = BertPredictionHeadTransform(config)
-        self.decoder = nn.Linear(
-            config.hidden_size,
-            config.vocab_size if voc_size is None else voc_size
-        )
-
-    def forward(self, hidden_states: torch.Tensor) -> torch.Tensor:
-        """Forward pass for language model prediction head."""
-        hidden_states = self.transform(hidden_states)
-        return self.decoder(hidden_states)
