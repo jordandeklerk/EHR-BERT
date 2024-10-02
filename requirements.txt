@@ -1,8 +1,7 @@
-numpy
-pandas
-scikit-learn
-torch
-tqdm
-wandb
-einops
-
+einops==0.8.0
+numpy==2.1.1
+pandas==2.2.3
+scikit_learn==1.4.0
+torch==2.1.1
+tqdm==4.65.0
+wandb==0.16.3
