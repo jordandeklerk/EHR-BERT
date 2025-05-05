@@ -1,23 +1,12 @@
 # EHR-BERT: Masked Token Learning for Inpatient Diagnosis and Procedure Prediction 
 
-## Highlights
+## Overview
 
 ![BEHRT Architecture](./images/bert.png)
 
-EHR-BERT is a project aimed at leveraging BERT (Bidirectional Encoder Representations from Transformers) for Electronic Health Records (EHR) data. BERT is an encoder-only transformer model that processes sequences of data by capturing context from both directions (left-to-right and right-to-left) simultaneously. This bidirectional capability allows it to understand the nuanced relationships within the data. In the context of EHR data, BERT is adapted to handle the unique structure of medical records, which include sequential visits, diagnoses, procedures, and patient information such as age and event positions.
+EHR-BERT is aimed at leveraging BERT (Bidirectional Encoder Representations from Transformers) for Electronic Health Records (EHR) data. BERT is an encoder-only transformer model that processes sequences of data by capturing context from both directions (left-to-right and right-to-left) simultaneously. This bidirectional capability allows it to understand the nuanced relationships within the data. In the context of EHR data, BERT is adapted to handle the unique structure of medical records, which include sequential visits, diagnoses, procedures, and patient information such as age and event positions.
 
 EHR-BERT takes into account diagnoses, age, positional encodings for events, and segment encodings that differentiate between visits. These elements are combined to form a final embedding that represents the latent contextual information of a patient's EHR at any given visit.
-
-## Contents
-
-- [Project Structure](#project-structure)
-- [CMS Data Summary](#cms-data-summary)
-- [Usage](#usage)
-  - [Install Dependencies](#install-dependencies)
-  - [Download Data](#download-data)
-  - [Preprocess Data](#preprocess-data)
-  - [Run the Main Script](#run-the-main-script)
-  - [Results](#results)
 
 ## Project Structure
 
@@ -61,7 +50,7 @@ Though limited in inferential research value, SynPUFs offer a timely and cost-ef
 Create a virtual environment and clone this repository:
 
 ```bash
-# Clone the repository
+# Clone the repo
 git clone git@github.com:jordandeklerk/EHR-BERT.git
 cd EHR-BERT
 
@@ -87,7 +76,7 @@ Run the `preprocess_ip_claims.py` script to pre-process the downloaded data for 
 python preprocess_ip_claims.py
 ```
 
-### Run the Main Script
+### Main Script
 To train and evaluate the model, run the following `main.py` script and specify the parameters for training:
 ```bash
 python main.py --model_name 'Bert-Pretraining' \
